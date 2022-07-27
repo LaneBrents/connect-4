@@ -85,10 +85,24 @@ document.addEventListener('DOMContentLoaded', () => { // Loads the dom function
     // The player will switch from player 1 to player 2 every time a chip is dropped
 let currentPlayer = 1
 
+/*----- cached Elements -----*/
+const buttonEl = document.querySelector('#playAgain');
+
+//const render() = function()
+
 /*----- functions -----*/
 // Logic
 // init()
 
+ init();
+
+ function init(){
+   console.log('Initial states being set');
+
+    let chips = 0
+    let displayCurrentPlayer = 1
+
+ }
 
 function checkBoard() {
     for (let a = 0; a < winningArrays.length; a++) {
@@ -115,16 +129,18 @@ function checkBoard() {
       ) // Same as above, but with player-two winning
       {
         result.innerHTML = 'Player Two Wins!'
+
+        render()
       }
     }
   }
+
 
 /*----- event listeners -----*/
 // On click, puts the chip in the correct location
 
 for (let i = 0; i < chips.length; i++) {
     chips[i].onclick = () => {
-      //if the square below your current square is taken, you can go ontop of it
       if (chips[i + 7].classList.contains('taken') &&!chips[i].classList.contains('taken')) {
         if (currentPlayer == 1) {
           chips[i].classList.add('taken')
@@ -139,6 +155,10 @@ for (let i = 0; i < chips.length; i++) {
         } 
       } else alert("Can't go here, this is not an available space, please pick another")
       checkBoard()
+
+      render()
     }
   }
 })
+
+// document.querySelector('#playAgain').addEventListener('click', reset);
