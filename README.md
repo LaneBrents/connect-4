@@ -9,13 +9,15 @@ Connect-Four is a two-player game in which you try to build a row of four chips 
 
 
 ## Deployed link:
-
+https://graceful-elf-361f48.netlify.app/
 
 ## Visuals
 https://mycolor.space/
 
+![Imgur](https://imgur.com/Yo09Imb)
 
-## Planned inmprovements
+
+## Planned improvements
 * Adding a score as each player wins
 * Adding a falling animation as each chip is dropped into place
 * Create an actual theme to design the game
@@ -35,4 +37,4 @@ https://mycolor.space/
 
 # Original wireframe and planning blueprint
 
-![wireframe](https://imgur.com/a/vqjW1jD)
+![Imgur](https://imgur.com/uFy4vEK)
