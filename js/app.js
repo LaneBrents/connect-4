@@ -88,21 +88,8 @@ let currentPlayer = 1
 /*----- cached Elements -----*/
 const buttonEl = document.querySelector('#playAgain');
 
-//const render() = function()
-
 /*----- functions -----*/
 // Logic
-// init()
-
- init();
-
- function init(){
-   console.log('Initial states being set');
-
-    let chips = 0
-    let displayCurrentPlayer = 1
-
- }
 
 function checkBoard() {
     for (let a = 0; a < winningArrays.length; a++) {
@@ -129,16 +116,14 @@ function checkBoard() {
       ) // Same as above, but with player-two winning
       {
         result.innerHTML = 'Player Two Wins!'
-
-        render()
       }
     }
   }
 
-
 /*----- event listeners -----*/
-// On click, puts the chip in the correct location
+// On click, puts the chip in the correct location, cannot press on a empty space where there is not a chip already.
 
+// When putting a chip on the board, it sits on an invisible div named 'taken' in order for them to stack.
 for (let i = 0; i < chips.length; i++) {
     chips[i].onclick = () => {
       if (chips[i + 7].classList.contains('taken') &&!chips[i].classList.contains('taken')) {
@@ -156,9 +141,13 @@ for (let i = 0; i < chips.length; i++) {
       } else alert("Can't go here, this is not an available space, please pick another")
       checkBoard()
 
-      render()
+      };
     }
-  }
 })
+// Since I am not keeping a score I can use .reload to refresh the page one game at a time
+function reset(){
+  console.log('reset button pushed')
+  location.reload()
+}
+ document.querySelector('.reset').addEventListener('click', reset);
 
-// document.querySelector('#playAgain').addEventListener('click', reset);
