@@ -14,7 +14,7 @@ https://graceful-elf-361f48.netlify.app/
 ## Visuals
 https://mycolor.space/
 
-![Imgur](https://imgur.com/Yo09Imb)
+https://imgur.com/Yo09Imb
 
 
 ## Planned improvements
@@ -37,4 +37,4 @@ https://mycolor.space/
 
 # Original wireframe and planning blueprint
 
-![Imgur](https://imgur.com/uFy4vEK)
+https://imgur.com/uFy4vEK
